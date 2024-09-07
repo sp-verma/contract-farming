@@ -1,15 +1,25 @@
-"use client"
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 // Components for sections
-import AddNewCropSection from "@/components/addcrop"; // You need to create this component
-import ContractsSection from "@/components/contracts"; // You need to create this component
-import ProfileSection from "@/components/profile"; // You need to create this component
-
+import AddNewCropSection from "@/components/addcrop"; // Create this component
+import ContractsSection from "@/components/contracts"; // Create this component
+import ProfileSection from "@/components/profile"; // Create this component
 
 const Dashboard = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    // This ensures the component is only rendered on the client side
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // Render nothing on the server side
+  }
+
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-green-200 via-blue-200 to-purple-200 text-gray-800 flex">
@@ -69,7 +79,6 @@ const Dashboard = () => {
             <Route path="/add-new-crop" element={<AddNewCropSection />} />
             <Route path="/contracts" element={<ContractsSection />} />
             <Route path="/profile" element={<ProfileSection />} />
-          
           </Routes>
         </motion.main>
       </div>
