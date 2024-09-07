@@ -74,12 +74,14 @@ const Navbar = () => {
           >
             Sign In
           </motion.button>
-          <motion.button
+          <motion.a
+
+          href="login"
             whileHover={{ scale: 1.05 }}
             className="bg-white text-black py-2 px-4 rounded shadow-md hover:bg-gray-100"
           >
             Login
-          </motion.button>
+          </motion.a>
         </div>
       </div>
     </nav>
