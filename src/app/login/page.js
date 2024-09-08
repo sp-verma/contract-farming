@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -8,14 +8,18 @@ const LoginPage = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   // Dummy credentials
-  const dummyUsername = 'farmer123';
-  const dummyPassword = 'password123';
+  const credentials = {
+    farmer: { username: 'farmer123', password: 'password123' },
+    contractor: { username: 'contractor456', password: 'password456' }
+  };
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (username === dummyUsername && password === dummyPassword) {
-      // Use window.location to redirect after successful login
-      window.location.href = '/farmerinfo';
+
+    if (username === credentials.farmer.username && password === credentials.farmer.password) {
+      window.location.href = '/farmerinfo'; // Redirect to Farmer Dashboard
+    } else if (username === credentials.contractor.username && password === credentials.contractor.password) {
+      window.location.href = '/contractordashbord'; // Redirect to Contractor Dashboard
     } else {
       setErrorMessage('Invalid username or password');
     }

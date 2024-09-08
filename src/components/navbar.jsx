@@ -6,12 +6,17 @@ const Navbar = () => {
   return (
     <nav className="bg-blue-500 shadow-md sticky top-0 z-50 text-black">
       <div className="container mx-auto flex justify-between items-center p-4">
-        {/* Logo with animation */}
+        {/* Logo with name "Kishan Sanjivni" and animation */}
         <motion.div
           whileHover={{ scale: 1.1 }}
-          className="text-2xl font-bold text-white"
+          className="flex items-center space-x-3 text-white font-bold text-2xl"
         >
-          MyLogo
+          <img 
+            src="https://www.shutterstock.com/shutterstock/photos/2414175581/display_1500/stock-vector-vector-business-emblem-agro-market-with-decorative-leaf-modern-alphabet-letters-and-numbers-set-2414175581.jpg" 
+            alt="Kishan Sanjivni Logo" 
+            className="w-10 h-10"
+          />
+          <span>Kishan Sanjivni</span>
         </motion.div>
 
         {/* Links with icons and animation */}
@@ -75,8 +80,7 @@ const Navbar = () => {
             Sign In
           </motion.button>
           <motion.a
-
-          href="login"
+            href="login"
             whileHover={{ scale: 1.05 }}
             className="bg-white text-black py-2 px-4 rounded shadow-md hover:bg-gray-100"
           >

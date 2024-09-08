@@ -84,7 +84,7 @@ const Marketplace = () => {
               <div
                 key={product.id}
                 className="border border-gray-700 rounded-lg shadow-lg bg-white text-black flex overflow-hidden cursor-pointer"
-                onClick={() => window.location.href = `/product/${product.id}`}
+                onClick={() => window.location.href = `/productoverview?id=${product.id}`}
               >
                 <div className="w-1/2">
                   <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
@@ -122,6 +122,7 @@ const Marketplace = () => {
               <div
                 key={contract.id}
                 className="border border-gray-700 rounded-lg shadow-lg p-4 transition-transform hover:scale-105 bg-white text-black"
+                onClick={() => window.location.href = `/contractoverview?id=${contract.id}`}
               >
                 <div className="flex items-center mb-4">
                   <img src={contract.image} alt={contract.title} className="w-16 h-16 object-cover rounded-full mr-4" />

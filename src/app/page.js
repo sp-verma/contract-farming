@@ -33,7 +33,7 @@ export default function Home() {
           <Link href="/marketplace">
             <motion.button
               whileHover={{ scale: 1.1 }}
-              className="mt-8 px-6 py-3 bg-green-500 rounded-full text-white text-lg"
+              className="mt-8 px-6 py-3 bg-yellow-500 rounded-full text-white text-lg"
             >
               Explore the Marketplace
             </motion.button>
