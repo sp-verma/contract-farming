@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import image from "@/public/sih2.png"
+import image from "@/public/sih2.png";
 
 export default function Home() {
   return (
@@ -55,55 +55,55 @@ export default function Home() {
           <p className="mt-6 text-lg text-gray-600">
             We provide a platform where farmers and contractors can easily connect, negotiate contracts, and trade products in a seamless and transparent manner.
           </p>
-          <div className="mt-12 flex flex-wrap justify-center gap-10">
-            {/* Feature Card 1 */}
+          <div className="mt-12 flex flex-wrap justify-center gap-6">
+            {/* Feature Card 1 - For Farmers */}
             <motion.div
-              className="bg-blue-100 p-6 rounded-lg shadow-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
+              className="bg-blue-100 p-6 rounded-lg shadow-lg w-80 h-80 flex flex-col items-center justify-between"
               whileHover={{ scale: 1.05 }}
             >
               <Image
-                src="/images/farmer-icon.png"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ9W15Hh_7mgF-oO3Dl_M32EWBjJUo_cA8Uw&s"
                 alt="Farmer Icon"
                 width={80}
                 height={80}
-                className="mx-auto"
+                className="mb-4"
               />
-              <h3 className="mt-4 text-xl font-semibold">For Farmers</h3>
-              <p className="mt-2 text-gray-600">
+              <h3 className="text-xl font-semibold">For Farmers</h3>
+              <p className="mt-2 text-gray-600 text-center">
                 Get the best deals on your crops and negotiate contracts with contractors.
               </p>
             </motion.div>
-            {/* Feature Card 2 */}
+            {/* Feature Card 2 - For Contractors */}
             <motion.div
-              className="bg-blue-100 p-6 rounded-lg shadow-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
+              className="bg-blue-100 p-6 rounded-lg shadow-lg w-80 h-80 flex flex-col items-center justify-between"
               whileHover={{ scale: 1.05 }}
             >
               <Image
-                src="/images/contractor-icon.png"
+                src="https://img.freepik.com/free-photo/lifestyle-people-learning-make-sushi_23-2149865357.jpg"
                 alt="Contractor Icon"
                 width={80}
                 height={80}
-                className="mx-auto"
+                className="mb-4"
               />
-              <h3 className="mt-4 text-xl font-semibold">For Contractors</h3>
-              <p className="mt-2 text-gray-600">
+              <h3 className="text-xl font-semibold">For Contractors</h3>
+              <p className="mt-2 text-gray-600 text-center">
                 Access a wide range of agricultural products and secure long-term contracts with farmers.
               </p>
             </motion.div>
-            {/* Feature Card 3 */}
+            {/* Feature Card 3 - Secure Transactions */}
             <motion.div
-              className="bg-blue-100 p-6 rounded-lg shadow-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
+              className="bg-blue-100 p-6 rounded-lg shadow-lg w-80 h-80 flex flex-col items-center justify-between"
               whileHover={{ scale: 1.05 }}
             >
               <Image
-                src="/images/security-icon.png"
+                src="https://img.freepik.com/premium-vector/secure-payment-credit-card-icon-with-shield-secure-transaction-vector-stock-illustration_100456-11325.jpg"
                 alt="Security Icon"
                 width={80}
                 height={80}
-                className="mx-auto"
+                className="mb-4"
               />
-              <h3 className="mt-4 text-xl font-semibold">Secure Transactions</h3>
-              <p className="mt-2 text-gray-600">
+              <h3 className="text-xl font-semibold">Secure Transactions</h3>
+              <p className="mt-2 text-gray-600 text-center">
                 All deals and contracts are secure and transparent for both parties.
               </p>
             </motion.div>
@@ -125,85 +125,68 @@ export default function Home() {
           <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-12">
             {/* How It Works Step 1 */}
             <motion.div
-              className="w-full md:w-1/3 bg-white p-6 rounded-lg shadow-lg"
+              className="w-full md:w-1/3 bg-white p-6 rounded-lg shadow-lg h-80 flex flex-col items-center justify-between"
               whileHover={{ scale: 1.05 }}
             >
               <Image
-                src="/images/contract-listing.png"
-                alt="Contract Listing"
+                src="https://help.sana-commerce.com/_sana_/handlers/getfile.ashx/da299559-e375-400a-a9f3-4d277c0762b2/01.png"
+                alt="Contractors List Contracts"
                 width={80}
                 height={80}
-                className="mx-auto"
+                className="mb-4"
               />
               <h3 className="text-xl font-semibold">Contractors List Contracts</h3>
-              <p className="mt-4 text-gray-600">
+              <p className="mt-4 text-gray-600 text-center">
                 Contractors can list their available contracts for various crops and services. This allows farmers to find and negotiate contracts that fit their needs.
               </p>
             </motion.div>
 
             {/* How It Works Step 2 */}
             <motion.div
-              className="w-full md:w-1/3 bg-white p-6 rounded-lg shadow-lg"
+              className="w-full md:w-1/3 bg-white p-6 rounded-lg shadow-lg h-80 flex flex-col items-center justify-between"
               whileHover={{ scale: 1.05 }}
             >
               <Image
-                src="/images/farmer-receives.png"
-                alt="Farmer Receives Contracts"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcmasGw1GyQ4lLQbjoyq78nTpNUbPreBb44w&s"
+                alt="Farmers Receive Contracts"
                 width={80}
                 height={80}
-                className="mx-auto"
+                className="mb-4"
               />
               <h3 className="text-xl font-semibold">Farmers Receive Contracts</h3>
-              <p className="mt-4 text-gray-600">
-                Farmers can view available contracts and choose the ones that best suit their requirements. This ensures that they get the best deals and opportunities.
+              <p className="mt-4 text-gray-600 text-center">
+                Farmers can browse through listed contracts and choose the ones that best suit their needs. This streamlined process ensures that farmers can quickly find and secure the best contracts.
               </p>
             </motion.div>
 
             {/* How It Works Step 3 */}
             <motion.div
-              className="w-full md:w-1/3 bg-white p-6 rounded-lg shadow-lg"
+              className="w-full md:w-1/3 bg-white p-6 rounded-lg shadow-lg h-80 flex flex-col items-center justify-between"
               whileHover={{ scale: 1.05 }}
             >
               <Image
-                src="/images/buy-products.png"
-                alt="Buy Products"
+                src="https://img.freepik.com/premium-vector/secure-payment-credit-card-icon-with-shield-secure-transaction-vector-stock-illustration_100456-11325.jpg"
+                alt="Secure Transactions"
                 width={80}
                 height={80}
-                className="mx-auto"
+                className="mb-4"
               />
-              <h3 className="text-xl font-semibold">Buy Products from Marketplace</h3>
-              <p className="mt-4 text-gray-600">
-                Buyers can browse the marketplace, view various agricultural products listed by farmers, and make purchases directly through the platform.
+              <h3 className="text-xl font-semibold">Secure Transactions</h3>
+              <p className="mt-4 text-gray-600 text-center">
+                All transactions are secure, and both parties have clear and transparent terms, reducing the risk of disputes and ensuring a smooth process.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Call to Action Section */}
-      <section className="py-20 bg-green-500 text-white text-center">
-        <motion.h2
-          className="text-3xl md:text-5xl font-bold"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          Ready to Start Trading?
-        </motion.h2>
-        <p className="mt-4 text-lg">
-          Join our platform today and connect with trusted farmers and contractors.
-        </p>
-        <motion.div
-          className="mt-8"
-          whileHover={{ scale: 1.1 }}
-        >
-          <Link href="/signup">
-            <button className="px-8 py-3 bg-black rounded-full text-white text-lg">
-              Sign Up Now
-            </button>
-          </Link>
-        </motion.div>
-      </section>
+      {/* Footer */}
+      <footer className="bg-blue-500 text-white py-8">
+        <div className="container mx-auto text-center">
+          <p>&copy; 2024 Agri Marketplace. All rights reserved.</p>
+          <p>Made with <span className="text-red-500">❤️</span> for farmers and contractors.</p>
+        </div>
+      </footer>
     </div>
   );
 }

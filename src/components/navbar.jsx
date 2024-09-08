@@ -16,7 +16,7 @@ const Navbar = () => {
             alt="Kishan Sanjivni Logo" 
             className="w-10 h-10"
           />
-          <span>Kishan Sanjivni</span>
+          <span>Contract Farming</span>
         </motion.div>
 
         {/* Links with icons and animation */}

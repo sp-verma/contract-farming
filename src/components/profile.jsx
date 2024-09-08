@@ -53,7 +53,7 @@ const ProfileSection = () => {
       {/* Farmer Information */}
       <div className="flex items-center mb-6">
         <img
-          src="/images/farmer-profile.jpg"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV7N6wsv31b3zyrm_YEu7BDUrhEtQP00phhw&s"
           alt="Farmer"
           className="w-16 h-16 rounded-full border-4 border-green-500"
         />

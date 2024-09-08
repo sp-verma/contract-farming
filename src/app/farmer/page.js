@@ -5,16 +5,17 @@ import { motion } from "framer-motion";
 // Farmer data with Indian names and star ratings
 const farmers = [
   { name: "Rajesh Kumar", image: "https://thumbs.dreamstime.com/b/indian-farmer-holding-barley-showing-his-strong-healthy-crop-wheat-174019332.jpg", fields: "10 Acres", certified: true, rating: 4.5, specialization: "Organic Crops", plants: ["Tomato", "Cucumber", "Lettuce"] },
-  { name: "Aarti Patel", image: "https://media.istockphoto.com/id/1205325344/photo/farmer-in-agricultural-field.jpg?s=612x612&w=0&k=20&c=krsRk4T2MsmMy6PmrpPDR0i_1ja3_jQaNl80fBejWck=", fields: "20 Acres", certified: false, rating: 4.2, specialization: "Vegetable Farming", plants: ["Potato", "Carrot", "Beetroot"] },
+  { name: "Arun Patel", image: "https://media.istockphoto.com/id/1205325344/photo/farmer-in-agricultural-field.jpg?s=612x612&w=0&k=20&c=krsRk4T2MsmMy6PmrpPDR0i_1ja3_jQaNl80fBejWck=", fields: "20 Acres", certified: false, rating: 4.2, specialization: "Vegetable Farming", plants: ["Potato", "Carrot", "Beetroot"] },
   { name: "Anil Sharma", image: "https://plus.unsplash.com/premium_photo-1682092016074-b136e1acb26e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW5kaWFuJTIwZmFybWVyfGVufDB8fDB8fHww", fields: "15 Acres", certified: true, rating: 4.7, specialization: "Fruit Farming", plants: ["Apple", "Peach", "Plum"] },
-  { name: "Meera Gupta", image: "https://t4.ftcdn.net/jpg/04/43/65/85/240_F_443658521_oZgdN7yZCXWYEDCgL4zBmhms4WjMFRgA.jpg", fields: "30 Acres", certified: true, rating: 4.0, specialization: "Grain Crops", plants: ["Wheat", "Corn", "Barley"] },
+  { name: "Mohan Gupta", image: "https://t4.ftcdn.net/jpg/04/43/65/85/240_F_443658521_oZgdN7yZCXWYEDCgL4zBmhms4WjMFRgA.jpg", fields: "30 Acres", certified: true, rating: 4.0, specialization: "Grain Crops", plants: ["Wheat", "Corn", "Barley"] },
   { name: "Vikram Singh", image: "https://t3.ftcdn.net/jpg/05/68/75/36/240_F_568753669_T3ddusst5w1VY2uvX7EAaZYGKAMslsBk.jpg", fields: "25 Acres", certified: false, rating: 4.3, specialization: "Herbs", plants: ["Basil", "Mint", "Rosemary"] },
-  { name: "Sunita Rao", image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScv1OPBCiuSyxuW2nQLLofmwmqPhZp_TS1hA&s", fields: "12 Acres", certified: true, rating: 4.6, specialization: "Vegetable Farming", plants: ["Bell Pepper", "Spinach", "Onion"] },
+  { name: "Ravi Rao", image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScv1OPBCiuSyxuW2nQLLofmwmqPhZp_TS1hA&s", fields: "12 Acres", certified: true, rating: 4.6, specialization: "Vegetable Farming", plants: ["Bell Pepper", "Spinach", "Onion"] },
   { name: "Ravi Desai", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl_qkSvCxagO4S9H7ygbdY-R_qafanxTA06w&s", fields: "8 Acres", certified: true, rating: 4.8, specialization: "Berry Farming", plants: ["Strawberry", "Blueberry", "Raspberry"] },
-  { name: "Geeta Agarwal", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_dok9pkE51_yPia5GHYbrHJ2l70bwc0Tyuw&s", fields: "18 Acres", certified: false, rating: 4.1, specialization: "Root Crops", plants: ["Carrot", "Beet", "Turnip"] },
+  { name: "Gopal Agarwal", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_dok9pkE51_yPia5GHYbrHJ2l70bwc0Tyuw&s", fields: "18 Acres", certified: false, rating: 4.1, specialization: "Root Crops", plants: ["Carrot", "Beet", "Turnip"] },
   { name: "Arjun Patel", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWqYhcfjamEJm1kPOLkq7X8OQpx1uO0hcxOA&s", fields: "22 Acres", certified: true, rating: 4.4, specialization: "Organic Herbs", plants: ["Thyme", "Oregano", "Parsley"] },
-  { name: "Neelam Yadav", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFDPTSyiXa1aPoppZZ_El3Dn_GvE6dLE1keQ&s", fields: "14 Acres", certified: true, rating: 4.9, specialization: "Specialty Crops", plants: ["Avocado", "Quinoa", "Chia Seeds"] },
+  { name: "Naveen Yadav", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFDPTSyiXa1aPoppZZ_El3Dn_GvE6dLE1keQ&s", fields: "14 Acres", certified: true, rating: 4.9, specialization: "Specialty Crops", plants: ["Avocado", "Quinoa", "Chia Seeds"] },
 ];
+
 
 // FarmerCard Component
 const FarmerCard = ({ farmer }) => (

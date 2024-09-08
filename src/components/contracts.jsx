@@ -10,7 +10,7 @@ export default function ActiveContractsSection() {
       timeRemaining: "3 days 4 hours",
       nextImageUpload: "In 2 days",
       chatHistory: ["Message 1", "Message 2"],
-      imageHistory: ["/images/crop1.jpg", "/images/crop2.jpg"],
+      imageHistory: ["https://www.shutterstock.com/image-photo/gold-wheat-flied-panorama-tree-260nw-674455723.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVPzHP5ZrMQE9kk_L4GX1grfQTc9_cjHteaMHcGP2SXfTvAyZ-pkWRLFfR4u_WVNcyspQ&usqp=CAU"],
       contractCertificate: "/certificates/contract1.pdf",
       importantDates: {
         completionDate: "2024-10-15",

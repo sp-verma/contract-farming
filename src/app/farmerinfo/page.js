@@ -53,7 +53,7 @@ const Dashboard = () => {
                   to="/profile"
                   className="block p-4 bg-purple-500 hover:bg-purple-600 text-center rounded-lg transition duration-300"
                 >
-                  Profile
+                  farmerinfo
                 </Link>
               </li>
               <li>
@@ -61,7 +61,7 @@ const Dashboard = () => {
                   to="/marketplace"
                   className="block p-4 bg-indigo-500 hover:bg-indigo-600 text-center rounded-lg transition duration-300"
                 >
-                  Marketplace
+                  wheather
                 </Link>
               </li>
             </ul>

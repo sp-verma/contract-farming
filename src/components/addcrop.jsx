@@ -19,7 +19,7 @@ export default function AddNewCropSection() {
       description: "High-quality wheat from organic farming",
       quantity: "100 kg",
       price: "₹3000",
-      image: "/images/wheat.jpg",
+      image: "https://cdn.britannica.com/80/157180-050-7B906E02/Heads-wheat-grains.jpg",
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ export default function AddNewCropSection() {
       description: "Organic Basmati rice",
       quantity: "200 kg",
       price: "₹6000",
-      image: "/images/rice.jpg",
+      image: "https://www.health.com/thmb/a8GxwWgmB5KpQW8SfW6VA7UFwaI=/722x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1734160670-0157c2daf8e841d6a783b38aedc51aa8.jpg",
     },
     // Add more crops as needed
   ]);
@@ -63,7 +63,7 @@ export default function AddNewCropSection() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-100 to-green-300 text-gray-800 p-10">
-      <h2 className="text-3xl font-bold text-green-800 mb-6">Add New Crop to Marketplace</h2>
+      <h2 className="text-3xl font-bold text-green-800 mb-6">Add New Crop to WhereHOUSE</h2>
 
       {/* Crop Upload Form */}
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-lg mb-10">
@@ -162,7 +162,7 @@ export default function AddNewCropSection() {
           type="submit"
           className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg shadow"
         >
-          Add Crop to Marketplace
+          Add Crop to WhereHouse
         </button>
       </form>
 
