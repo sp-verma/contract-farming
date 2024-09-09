@@ -26,7 +26,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-green-400 via-blue-500 to-purple-600">
+    <div className="min-h-screen flex items-center justify-center ">
       <motion.div
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ const LoginPage = () => {
             <label className="block text-gray-700 text-sm font-bold mb-2">Username</label>
             <input
               type="text"
-              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
               placeholder="Enter your username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
