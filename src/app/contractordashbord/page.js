@@ -9,7 +9,7 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 const ContractorDashboard = () => {
   const [currentSection, setCurrentSection] = useState("dashboard");
-  const [newContract, setNewContract] = useState({ farmerName: "", imageUrl: "", status: "Pending" });
+  const [newContract, setNewContract] = useState({ CropName: "", imageUrl: "", quantity: "", pricePerKg: "" });
 
   // Sample data for financial stats
   const financialData = {
@@ -61,23 +61,22 @@ const ContractorDashboard = () => {
   // Handle form submission for new contract
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    // Logic to add the new contract
     console.log("New contract added:", newContract);
-    setNewContract({ farmerName: "", imageUrl: "", status: "Pending" });
+    setNewContract({ CropName: "", imageUrl: "", quantity: "", pricePerKg: "" });
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen overflow-hidden">
       {/* Sidebar */}
-      <aside className="w-1/4 bg-gradient-to-r from-green-500 to-green-700 text-white p-6 shadow-lg">
+      <aside className="w-1/4 bg-gradient-to-r from-green-500 to-green-700 text-white p-6 shadow-lg h-screen">
         <div className="flex items-center mb-6">
           <img
-            src="contractor-image-url"
+            src="https://thumbs.dreamstime.com/b/indian-farmer-holding-barley-showing-his-strong-healthy-crop-wheat-174019332.jpg"
             alt="Contractor Profile"
             className="w-16 h-16 rounded-full border-4 border-white"
           />
           <div className="ml-4">
-            <h2 className="text-lg font-bold">John Doe</h2>
+            <h2 className="text-lg font-bold">kamlesh</h2>
             <p>Contractor</p>
           </div>
         </div>
@@ -132,31 +131,24 @@ const ContractorDashboard = () => {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 p-8 bg-gray-100">
+      <main className="flex-1 overflow-hidden p-8 bg-gray-100">
         {currentSection === "dashboard" && (
-          <section id="dashboard">
-            <div className="flex justify-between items-center mb-6">
-              <h2 className="text-3xl font-semibold">Green Valley Contract</h2>
-              <button className="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300">
-                + Add Contract
-              </button>
-            </div>
-
-            {/* New Contract Form */}
+          <section id="dashboard" className="h-full overflow-auto">
             <form onSubmit={handleFormSubmit} className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-2xl font-semibold mb-4">Add New Contract</h3>
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700">Farmer Name</label>
+                <label className="block text-sm font-medium text-gray-700">Crop Name</label>
                 <input
                   type="text"
-                  name="farmerName"
-                  value={newContract.farmerName}
+                  name="CropName"
+                  value={newContract.CropName}
                   onChange={handleInputChange}
                   className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-                  placeholder="Enter Farmer Name"
+                  placeholder="Enter Crop Name"
                   required
                 />
               </div>
+
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700">Contract Image URL</label>
                 <input
@@ -169,41 +161,95 @@ const ContractorDashboard = () => {
                   required
                 />
               </div>
+
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700">Status</label>
-                <select
-                  name="status"
-                  value={newContract.status}
+                <label className="block text-sm font-medium text-gray-700">Quantity (in kg)</label>
+                <input
+                  type="number"
+                  name="quantity"
+                  value={newContract.quantity}
                   onChange={handleInputChange}
                   className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-                >
-                  <option value="Pending">Pending</option>
-                  <option value="Active">Active</option>
-                  <option value="Completed">Completed</option>
-                </select>
+                  placeholder="Enter Quantity"
+                  required
+                />
               </div>
-              <button
-                type="submit"
-                className="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300"
-              >
+
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700">Price per Kg (in ₹)</label>
+                <input
+                  type="number"
+                  name="pricePerKg"
+                  value={newContract.pricePerKg}
+                  onChange={handleInputChange}
+                  className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+                  placeholder="Enter Price per Kg"
+                  required
+                />
+              </div>
+
+              <button type="submit" className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
                 Add Contract
               </button>
             </form>
           </section>
         )}
 
-        {/* Monitor Your Contracts */}
+        {currentSection === "bids" && (
+          <section id="bids" className="h-full overflow-auto">
+            {/* Bids & Negotiations Content */}
+            <h3 className="text-2xl font-semibold mb-4">Bids & Negotiations</h3>
+            <ul>
+              {bidsData.map((bid) => (
+                <li key={bid.id} className="bg-white p-4 rounded-lg shadow mb-4">
+                  <div className="flex justify-between">
+                    <p className="text-lg font-semibold">{bid.farmerName}</p>
+                    <p className="text-lg font-semibold">{bid.bidAmount}</p>
+                  </div>
+                  <p className={`text-sm ${bid.status === "Accepted" ? "text-green-500" : "text-gray-500"}`}>
+                    {bid.status}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {currentSection === "payments" && (
+          <section id="payments" className="h-full overflow-auto">
+            {/* Payments & Financials Content */}
+            <h3 className="text-2xl font-semibold mb-4">Payments & Financials</h3>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <Bar data={financialData} />
+            </div>
+            <ul className="mt-6">
+              {paymentData.map((payment) => (
+                <li key={payment.id} className="bg-white p-4 rounded-lg shadow mb-4">
+                  <div className="flex justify-between">
+                    <p className="text-lg font-semibold">{payment.farmerName}</p>
+                    <p className="text-lg font-semibold">{payment.amount}</p>
+                  </div>
+                  <p className="text-gray-500">{payment.date}</p>
+                  <p className={`text-sm ${payment.status === "Paid" ? "text-green-500" : "text-red-500"}`}>
+                    {payment.status}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
         {currentSection === "monitor" && (
-          <section id="monitor">
+          <section id="monitor" className=" pt-14">
             <h2 className="text-2xl font-semibold mb-6">Monitor Your Contracts</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
               {contracts.map((contract) => (
                 <div key={contract.id} className="bg-white p-6 rounded-lg shadow-lg">
-                  <img
+                  {/* <img
                     src={contract.imageUrl}
                     alt="Contract"
                     className="w-full h-40 object-cover mb-4 rounded-lg"
-                  />
+                  /> */}
                   <h3 className="text-lg font-semibold">{contract.farmerName}</h3>
                   <p className="text-sm text-gray-600">Status: {contract.status}</p>
                   <div className="mt-4">
@@ -217,30 +263,6 @@ const ContractorDashboard = () => {
                 </div>
               ))}
             </div>
-          </section>
-        )}
-
-        {/* Bids & Negotiations */}
-        {currentSection === "bids" && (
-          <section id="bids">
-            <h2 className="text-2xl font-semibold mb-6">Bids & Negotiations</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {bidsData.map((bid) => (
-                <div key={bid.id} className="bg-white p-6 rounded-lg shadow-lg">
-                  <h3 className="text-lg font-semibold">{bid.farmerName}</h3>
-                  <p className="text-sm text-gray-600">Bid Amount: {bid.bidAmount}</p>
-                  <p className="text-sm text-gray-600">Status: {bid.status}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Payments & Financials */}
-        {currentSection === "payments" && (
-          <section id="payments">
-            <h2 className="text-2xl font-semibold mb-6">Payments & Financials</h2>
-            <Bar data={financialData} />
           </section>
         )}
       </main>

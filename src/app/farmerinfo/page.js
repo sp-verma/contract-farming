@@ -57,12 +57,12 @@ const Dashboard = () => {
                 </Link>
               </li>
               <li>
-                <Link
+                {/* <Link
                   to="/marketplace"
                   className="block p-4 bg-indigo-500 hover:bg-indigo-600 text-center rounded-lg transition duration-300"
                 >
                   wheather
-                </Link>
+                </Link> */}
               </li>
             </ul>
           </nav>
