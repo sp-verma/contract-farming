@@ -4,26 +4,29 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 // Components for sections
-import AddNewCropSection from "@/components/addcrop"; // Create this component
-import ContractsSection from "@/components/contracts"; // Create this component
-import ProfileSection from "@/components/profile"; // Create this component
+import AddNewCropSection from "@/components/addcrop";
+import ContractsSection from "@/components/contracts";
+import ProfileSection from "@/components/profile";
+import WeatherSection from "@/components/weatherSection"; 
+import CropInfoAndAskSection from "@/components/CropInfoAndAskSection ";
+import ScanCropForDiseaseSection from "@/components/ScanCropForDiseaseSection";
+import SoilTestPage from "@/components/SoilTestForm.js"; // Import Soil Test component
+import FertilizerRecommendation from "@/components/FertilizerRecommendation"; // Import Fertilizer Recommendation component
 
 const Dashboard = () => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // This ensures the component is only rendered on the client side
     setIsClient(true);
   }, []);
 
   if (!isClient) {
-    return null; // Render nothing on the server side
+    return null;
   }
 
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-green-200 via-blue-200 to-purple-200 text-gray-800 flex">
-        
         {/* Sidebar */}
         <aside className="w-64 bg-gradient-to-br from-purple-900 to-green-700 text-white p-6 shadow-lg">
           <div className="mb-10 text-center">
@@ -53,16 +56,49 @@ const Dashboard = () => {
                   to="/profile"
                   className="block p-4 bg-purple-500 hover:bg-purple-600 text-center rounded-lg transition duration-300"
                 >
-                  farmerinfo
+                  Profile
                 </Link>
               </li>
               <li>
-                {/* <Link
-                  to="/marketplace"
+                <Link
+                  to="/weather"
                   className="block p-4 bg-indigo-500 hover:bg-indigo-600 text-center rounded-lg transition duration-300"
                 >
-                  wheather
-                </Link> */}
+                  Weather Info
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/crop-info-ask"
+                  className="block p-4 bg-yellow-500 hover:bg-yellow-600 text-center rounded-lg transition duration-300"
+                >
+                  Crop Info & Ask Crop
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/scan-crop"
+                  className="block p-4 bg-teal-500 hover:bg-teal-600 text-center rounded-lg transition duration-300"
+                >
+                  Scan Crop for Disease
+                </Link>
+              </li>
+              {/* Separate options for Soil Test and Fertilizer Recommendation */}
+              <li>
+                <Link
+                  to="/soil-test"
+                  className="block p-4 bg-red-500 hover:bg-red-600 text-center rounded-lg transition duration-300"
+                >
+                  Soil Test
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/fertilizer-recommendation"
+                  className="block p-4 bg-orange-500 hover:bg-orange-600 text-center rounded-lg transition duration-300"
+                >
+                  Fertilizer Recommendation
+                </Link>
               </li>
             </ul>
           </nav>
@@ -79,6 +115,12 @@ const Dashboard = () => {
             <Route path="/add-new-crop" element={<AddNewCropSection />} />
             <Route path="/contracts" element={<ContractsSection />} />
             <Route path="/profile" element={<ProfileSection />} />
+            <Route path="/weather" element={<WeatherSection />} />
+            <Route path="/crop-info-ask" element={<CropInfoAndAskSection />} />
+            <Route path="/scan-crop" element={<ScanCropForDiseaseSection />} />
+            {/* New Routes */}
+            <Route path="/soil-test" element={<SoilTestPage />} />
+            <Route path="/fertilizer-recommendation" element={<FertilizerRecommendation />} />
           </Routes>
         </motion.main>
       </div>

@@ -66,8 +66,8 @@ const ContractorDashboard = () => {
   };
 
   return (
-    <div className="flex h-screen overflow-hidden">
-      {/* Sidebar */}
+    <div className="flex h-screen overflow-hidden scroll-mt-0">
+      {/* Sidebar */}1
       <aside className="w-1/4 bg-gradient-to-r from-green-500 to-green-700 text-white p-6 shadow-lg h-screen">
         <div className="flex items-center mb-6">
           <img
