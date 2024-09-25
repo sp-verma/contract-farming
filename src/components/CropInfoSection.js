@@ -19,7 +19,7 @@ const crops = [
   },
   {
     name: "Sugarcane",
-    image:'https://media.istockphoto.com/id/185007888/photo/rolled-oats-in-a-bowl.jpg?s=612x612&w=0&k=20&c=VPCb7ESkEf9zUBh-9IhpmLWDk9_Dfvgwb-KUkhdtSj8=',
+    image:"https://media.istockphoto.com/id/185007888/photo/rolled-oats-in-a-bowl.jpg?s=612x612&w=0&k=20&c=VPCb7ESkEf9zUBh-9IhpmLWDk9_Dfvgwb-KUkhdtSj8=",
     description: "Sugarcane is used to produce sugar and ethanol, widely cultivated in tropical regions.",
   },
 ];
