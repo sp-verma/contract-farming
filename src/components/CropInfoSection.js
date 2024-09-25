@@ -17,11 +17,7 @@ const crops = [
     image:'https://cdn-prod.medicalnewstoday.com/content/images/articles/295/295268/barley-grains-in-a-wooden-bowl.jpg',
     description: "Maize, or corn, is a versatile crop used for food, fodder, and biofuel.",
   },
-  {
-    name: "Sugarcane",
-    image:"https://media.istockphoto.com/id/185007888/photo/rolled-oats-in-a-bowl.jpg?s=612x612&w=0&k=20&c=VPCb7ESkEf9zUBh-9IhpmLWDk9_Dfvgwb-KUkhdtSj8=",
-    description: "Sugarcane is used to produce sugar and ethanol, widely cultivated in tropical regions.",
-  },
+ 
 ];
 
 const CropInfoSection = () => {
