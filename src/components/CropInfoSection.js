@@ -10,7 +10,7 @@ const crops = [
   {
     name: "Rice",
     image:'https://media.istockphoto.com/id/1014182360/photo/texture-with-of-barley-malt-for-beer-pale-ale-pilsen.jpg?s=612x612&w=0&k=20&c=2xTAPcwgHXJym1CmsPMCaj7smxaSrvX3shTULlEhTCM=',
-    description: "Rice is a primary food source for many countries, grown in paddy fields.",
+    description: "Rice is a primar food source for many countries, grown in paddy fields.",
   },
   {
     name: "Maize",
