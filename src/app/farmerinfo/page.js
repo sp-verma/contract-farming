@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import AddNewCropSection from "@/components/addcrop";
 import ContractsSection from "@/components/contracts";
 import ProfileSection from "@/components/profile";
-import WeatherSection from "@/components/weatherSection"; 
+
 import CropInfoAndAskSection from "@/components/CropInfoAndAskSection ";
 import ScanCropForDiseaseSection from "@/components/ScanCropForDiseaseSection";
 import SoilTestPage from "@/components/SoilTestForm.js"; // Import Soil Test component
@@ -115,12 +115,15 @@ const Dashboard = () => {
             <Route path="/add-new-crop" element={<AddNewCropSection />} />
             <Route path="/contracts" element={<ContractsSection />} />
             <Route path="/profile" element={<ProfileSection />} />
-            <Route path="/weather" element={<WeatherSection />} />
+
             <Route path="/crop-info-ask" element={<CropInfoAndAskSection />} />
             <Route path="/scan-crop" element={<ScanCropForDiseaseSection />} />
             {/* New Routes */}
             <Route path="/soil-test" element={<SoilTestPage />} />
-            <Route path="/fertilizer-recommendation" element={<FertilizerRecommendation />} />
+            <Route
+              path="/fertilizer-recommendation"
+              element={<FertilizerRecommendation />}
+            />
           </Routes>
         </motion.main>
       </div>
